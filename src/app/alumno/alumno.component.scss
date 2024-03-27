@@ -1,0 +1,40 @@
+.alumno-container {
+    margin-bottom: 20px;
+    margin-top: 10%;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.columna {
+    flex: 1;
+    padding: 5px;
+}
+
+.estado {
+    flex: 1; 
+}
+
+.botones-calificacion {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.btn-calificar {
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.aprobado .estado {
+    color: green;
+}
+
+.reprobado .estado {
+    color: red;
+}

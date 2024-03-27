@@ -1,0 +1,22 @@
+<div class="alumno-lista">
+    <div class="fila titulo">
+        <div class="columna">Nombre</div>
+        <div class="columna">Apellido</div>
+        <div class="columna">Calificación</div>
+        <div class="columna estado">Estado</div>
+        <div class="columna">Acción</div>
+    </div>
+    <div *ngFor="let alumno of listaAlumnos" class="fila">
+        <div class="columna">{{ alumno.nombre }}</div>
+        <div class="columna">{{ alumno.apellido }}</div>
+        <div class="columna">{{ alumno.calificacion }}</div>
+        <div class="columna estado" [ngClass]="{'aprobado': alumno.calificacion >= 5, 'reprobado': alumno.calificacion < 5}">
+            {{ alumno.calificacion >= 5 ? 'Aprobado' : 'Reprobado' }}
+        </div>
+        <div class="columna">
+            <button class="btn-calificar" (click)="calificarAlumno(alumno)">
+                {{ alumno.calificacion >= 5 ? 'Reprobar' : 'Aprobar' }}
+            </button>
+        </div>
+    </div>
+</div>
